@@ -1,0 +1,1 @@
+export const backEnd = 'https://77-222-32-138.vps-ptr.clients.spaceweb.ru/api'

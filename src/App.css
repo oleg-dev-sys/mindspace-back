@@ -1,0 +1,84 @@
+/* .App {
+  text-align: center;
+  background: #05060a;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.App::before,
+.App::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.App::before {
+  width: 60%;
+  height: 120%;
+  background: radial-gradient(ellipse, #ba01be 0%, transparent 70%);
+  top: 10%;
+  left: -10%;
+  float: 15s ease-in-out infinite alternate;
+}
+
+.App::after {
+  width: 60%;
+  height: 120%;
+  background: radial-gradient(ellipse, #028fad 0%, transparent 70%);
+  top: 10%;
+  right: -10%;
+  animation: float 30s infinite alternate-reverse;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(-10%) scaleX(1.2) scaleY(0.6);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(10%) scaleX(1.5) scaleY(0.4);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(-10%) scaleX(1) scaleY(0.7);
+    opacity: 0.9;
+  }
+} */
+
+.App {
+  position: relative;
+  z-index: 1;
+  margin-top: 120px;
+  user-select: none; /* Работает в большинстве современных браузеров */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE10+/Edge */
+}
+
+.App__header {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+  left: 1%;
+}
+
+.App__user_data {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 1.2rem;
+}
+.App__user_data_name {
+  font-size: 1.5rem;
+}
+
+
+
