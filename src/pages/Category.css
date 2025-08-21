@@ -12,6 +12,8 @@
   .back-btn {
     width: 90px;
     height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
   }
   
   .breathing-circle {
@@ -57,8 +59,9 @@
   }
   
   .meditation-list li.active {
-    background-color: #dfe6e9;
+    background-color: #004766;
     font-weight: bold;
+    border-radius: 20px;
   }
 
 

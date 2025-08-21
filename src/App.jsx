@@ -9,8 +9,17 @@ function App() {
   // const userPhotoUrl = tg.initDataUnsafe.photo_url;
   const [user, setUser] = useState();
 
-  tg.requestFullscreen();
-  tg.disableVerticalSwipes();
+  const platform = tg.platform;
+  const isPhone = platform === 'android' || platform === 'ios';
+
+  if (isPhone) {
+    tg.expand?.();                 // раскрыть bottom-sheet на мобиле
+    tg.disableVerticalSwipes?.();  // отключить свайп-вниз на мобиле
+    tg.requestFullscreen?.();      // включить fullscreen на мобиле
+  } else {
+    tg.exitFullscreen?.();         // на всякий случай выключить, если поддерживается
+    // тут — НИЧЕГО не делаем, оставляем стандартное окно
+  }
   
   useEffect(() => {
     const user = tg.initDataUnsafe.user;
@@ -23,8 +32,6 @@ function App() {
       .then(data => {
         setUser(data.streak);
         console.log('Авторизация:', data);
-        // tg.setItem('telegram_id', user.id);
-        // localStorage.setItem('telegram_id', user.id);
       });
   }, []);
 
@@ -33,9 +40,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div className='App__header'>
-        <button onClick={() => tg.close()}>Закрыть</button>
-      </div> */}
       <div className='App__user_data'>
         <div>Добро пожаловать,</div>
         <div className='App__user_data_name'>{tg.initDataUnsafe.user.first_name}</div>
