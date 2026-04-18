@@ -8,6 +8,7 @@ import categoriesData from '../data/categories';
 import { mockMeditations } from '../mocks/mockData';
 import DynamicBreathingOrb from '../components/home/DynamicBreathingOrb';
 import DynamicGlassCard from '../components/home/DynamicGlassCard';
+import { isVK } from '../utils/platform';
 
 const categoryConfig = {
   sleep: { icon: Moon, gradient: 'from-indigo-500/80 to-purple-600/80', label: 'Сон' },
@@ -164,7 +165,7 @@ export const Home = () => {
           <DynamicGlassCard className='p-4'>
             <div className='flex items-center justify-between'>
               <div className='text-left'>
-                <p className='text-sm text-white'>Telegram ID</p>
+                <p className='text-sm text-white'>{isVK ? 'ВК ID' : 'Telegram ID'}</p>
                 <p className='text-xs text-white/70'>{telegramId ?? '—'}</p>
               </div>
               <div className='rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-300'>

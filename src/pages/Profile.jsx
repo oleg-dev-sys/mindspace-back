@@ -14,6 +14,7 @@ import {
 import DynamicGlassCard from '../components/home/DynamicGlassCard';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
+import { isVK } from '../utils/platform';
 
 const modes = [
   { id: 'auto', label: 'Авто (по времени)' },
@@ -78,7 +79,7 @@ export default function Profile() {
             </div>
             <div className='flex-1 text-left'>
               <h2 className='mb-1 text-xl font-bold text-white'>{user?.first_name || 'Пользователь'}</h2>
-              <p className='text-sm text-white/80'>Telegram ID: {user?.id ?? '—'}</p>
+              <p className='text-sm text-white/80'>{isVK ? 'ВК ID' : 'Telegram ID'} {user?.id ?? '—'}</p>
               <p className='mt-1 text-xs text-white/70'>Стрик: {streak ?? 0} дней</p>
             </div>
           </div>
