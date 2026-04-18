@@ -26,6 +26,13 @@ const meditations = [
       category: 'stress',
       // file: '/meditations/stress1.mp3',
       duration: '8 мин'
+    },
+    {
+      id: '5',
+      title: 'Шум леса',
+      category: 'silent',
+      // file: '/meditations/forest1.mp3',
+      duration: '12 мин'
     }
   ];
   
