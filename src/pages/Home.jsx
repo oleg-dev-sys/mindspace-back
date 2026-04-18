@@ -39,8 +39,10 @@ export const Home = () => {
 
   const greeting = () => {
     const hour = new Date().getHours();
+    if (hour < 5) return 'Доброй ночи';
     if (hour < 12) return 'Доброе утро';
     if (hour < 18) return 'Добрый день';
+    if (hour < 22) return 'Добрый вечер';
     return 'Добрый вечер';
   };
 
