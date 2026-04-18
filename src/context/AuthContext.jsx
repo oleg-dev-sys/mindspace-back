@@ -16,8 +16,6 @@ export function AuthProvider({ children }) {
       try {
         setLoading(true);
 
-        await bridge.send('VKWebAppInit');
-
         const userData = await bridge.send('VKWebAppGetUserInfo');
         setVkUser(userData);
 
