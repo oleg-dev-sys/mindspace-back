@@ -13,6 +13,6 @@ export default defineConfig({
     ],
   },
   build: {
-    outDir: 'build', // или 'dist'
+    outDir: 'dist',
   },
 })
