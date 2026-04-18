@@ -41,9 +41,9 @@ export default function Profile() {
     [completedSessions, totalMinutes, streak],
   );
 
-  const handleLogout = () => {
-    window.Telegram?.WebApp?.close?.();
-  };
+  // const handleLogout = () => {
+  //   window.Telegram?.WebApp?.close?.();
+  // };
 
   return (
     <div className='mx-auto max-w-md px-6 pb-24 pt-12'>
